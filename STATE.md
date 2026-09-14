@@ -9,5 +9,5 @@ one cover and 3 to 6 images, and show Zoltán a contact sheet to approve.
 **After that:** scaffold Astro, build the pilot gallery and one case study page, review at
 380px and desktop with Zoltán.
 
-**Open, decide when it comes up:** site name and domain; which clients get a full case study
+**Open, decide when it comes up:** site name and domain; whether the services block shows prices; which clients get a full case study
 page and which stay gallery-only.

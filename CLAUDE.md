@@ -6,8 +6,9 @@ looks excellent, and it works properly on a phone. Opened with `/portfolio`.
 ## What this is, and isn't
 
 - A work-led portfolio. Galleries and case studies carry the site.
-- **No services block.** No engagements, pricing or "what I offer" section (Zoltán,
-  2026-09-14). One clear way to get in touch is fine.
+- **A services block is part of the site** (Zoltán, 2026-09-14, reversing his first brief).
+  Start from CR 3.0 `content/engagements.md` and adapt it to a portfolio site.
+- **No separate proof block** (Zoltán, 2026-09-14). The work carries the credibility.
 - Not clarityrepublic.com. That is `~/Documents/Clarity Republic 3.0`, which this project
   reads and never edits.
 
@@ -21,8 +22,7 @@ Clarity Republic 3.0, *"but be more flexible and not so rigid."*
 - **Still real constraints** (these are about truth and taste, not structure):
   - The reader test: a stranger gets who, what, why it matters and whether to trust it on
     one scan.
-  - Real proof only. No invented client, number, quote or outcome. Never publish the
-    fintech client's name or Maat's investment figures.
+  - Never publish the fintech client's name or Maat's investment figures.
   - Reader copy: no dash punctuation (—, –, spaced hyphen), no self-applied adjectives,
     never imply a client didn't understand their own business.
 - **Guidance, not procedure:** `decision-engine.md`'s kill list and tie-breakers. Run the
@@ -41,6 +41,7 @@ Mine these before writing anything fresh. His recorded words beat generated draf
 | Who he is, how to talk about him | CR 3.0 `backbone.md` | source |
 | ICP, proof rules, identity | CR 3.0 `positioning.md` (its §0.1 overrides are noted inside) | source |
 | Approved case copy, 12 company one-liners, About | CR 3.0 `content/work.md`, `content/about.md` | source, adapt freely |
+| Services: three engagements | CR 3.0 `content/engagements.md` | source, adapt freely |
 | Facts that may be used | CR 3.0 `decision-engine.md` §8 | source |
 | Verified testimonials, names and companies | CR 3.0 `reference/wayback-2024-source.md` | source |
 | His voice, 40,000 words recorded | `~/Documents/2026Claude/Clarity Republic/clients-raw-dump-interview-2026-08-19.md` | voice and facts |
