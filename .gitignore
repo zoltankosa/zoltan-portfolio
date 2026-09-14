@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+dist/
+.astro/
+# raw picks copied from Dropbox stay local; only optimized output is committed
+raw/
+*.psd
+*.psb
+*.ai
+*.zip
