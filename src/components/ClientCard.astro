@@ -13,7 +13,6 @@ const labels = client.items.map((i) => i.label);
 <div class="card">
   <Gallery slug={slug} labels={labels} alt={client.name} />
   <div class="meta">
-    <p class="eyebrow">{client.sector}</p>
     <h3>
       {href ? (
         <a href={href}>{client.name}<span class="arrow"> &rarr;</span></a>
@@ -21,6 +20,7 @@ const labels = client.items.map((i) => i.label);
         client.name
       )}
     </h3>
+    <p class="eyebrow">{client.sector}</p>
     <p class="line">{client.line}</p>
   </div>
 </div>
@@ -31,5 +31,6 @@ const labels = client.items.map((i) => i.label);
   h3 { margin-block-end: 6px; }
   h3 a { text-decoration: none; }
   .arrow { color: var(--ink); }
+  .eyebrow { margin-block-end: 10px; }
   .line { color: var(--muted); max-width: 60ch; }
 </style>

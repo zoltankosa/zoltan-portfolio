@@ -33,10 +33,6 @@
     padding: 56px;
     box-sizing: border-box;
   }
-  @media (max-width: 640px) {
-    .lb-track :global(img) { padding: 48px 40px; }
-  }
-
   .lb-close, .lb-prev, .lb-next {
     position: absolute;
     background: none;
@@ -68,7 +64,41 @@
   }
 
   @media (max-width: 640px) {
-    .lb-prev, .lb-next { padding: 10px; font-size: 20px; }
+    .lightbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr auto auto;
+      grid-template-areas:
+        "close close"
+        "track track"
+        "prev  next"
+        "count count";
+    }
+    .lb-close {
+      position: static;
+      grid-area: close;
+      justify-self: end;
+    }
+    .lb-track {
+      grid-area: track;
+      min-height: 0;
+    }
+    .lb-track :global(img) { padding: 16px 0; }
+    .lb-prev, .lb-next {
+      position: static;
+      justify-self: center;
+      padding: 14px 24px;
+      font-size: 20px;
+    }
+    .lb-prev { grid-area: prev; }
+    .lb-next { grid-area: next; }
+    .lb-count {
+      position: static;
+      grid-area: count;
+      justify-self: center;
+      transform: none;
+      padding-block-end: 12px;
+    }
   }
 </style>
 
