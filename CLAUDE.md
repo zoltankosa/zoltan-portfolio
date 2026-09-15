@@ -27,10 +27,21 @@ Clarity Republic 3.0, *"but be more flexible and not so rigid."*
     never imply a client didn't understand their own business.
 - **Guidance, not procedure:** `decision-engine.md`'s kill list and tie-breakers. Run the
   kill list over copy before showing it; skip the rest where it gets in the way.
-- **Design starting point:** CR 3.0 `reference/design-system.md` (Ink `#161616`, Paper
-  `#FAF9F7`, one berry accent `#A31E5C` used sparingly, geometric grotesk headings, generous
-  spacing, no decorative cards or shadows). Depart from it where a portfolio needs to
-  (full-bleed imagery, darker gallery ground, bigger image scale) and note why in one line.
+- **Design system (2026-09-15, supersedes the CR 3.0 markdown spec below):** Zoltán's own
+  Figma file, "Clarity Republic" — `Clarity 3.0` page, "Visual Foundation — Design System"
+  frame (Sections 1-5: Typography, Color, Grid & Spacing, Buttons & UI, Compositions). This
+  is the real source of truth for tokens now, not an adaptation. Pure monochrome: ink
+  `#0F0F0F`, paper `#FFFFFF`, text tiers `#555555`/`#8A8A8A`/`#B0B0B0`, no accent color.
+  Sora (weights 100/300/400/600 by size) for UI, Instrument Serif for editorial pull-quotes.
+  8px-based spacing scale (4-160). Section 5's compositions are the layout patterns in use:
+  centered thin-display hero with the eyebrow below the headline, numbered list (01/02/03)
+  for services instead of cards, asymmetric split for About (body left, label/value facts
+  right), and a contained-image case-study header (title+dek left, category tags right) —
+  one composition is explicitly labeled "Powered Storage," confirming it's the template for
+  that case study. Old CR 3.0 `reference/design-system.md` (berry accent `#A31E5C`, bold 600
+  everywhere) is retired for this project; still the live system for clarityrepublic.com
+  itself. Depart from the Figma system only where a portfolio needs to (full-bleed gallery
+  imagery, bigger image scale) and note why in one line.
 
 ## Copy sources
 

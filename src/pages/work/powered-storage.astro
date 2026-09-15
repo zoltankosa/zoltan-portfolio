@@ -11,31 +11,38 @@ const shots = ["PS7", "PS8", "PS9", "PS10", "PS12"]
   .filter((s) => s.img);
 ---
 <Base title="Powered Storage — Zoltán Kosa-Szántó" description="On demand storage, RV power and work containers, North Carolina. Brand and site work that taught the market a category it didn't have a name for yet.">
-  <section class="hero">
-    <Image src={cover} alt="Powered Storage brand and site work" widths={[600, 1000, 1600]} sizes="100vw" priority />
+  <section class="section wrap case-hero">
+    <div class="hero-frame">
+      <Image src={cover} alt="Powered Storage brand and site work" widths={[600, 1000, 1600]} sizes="(min-width: 860px) 1280px, 100vw" priority />
+    </div>
+    <div class="case-meta">
+      <div>
+        <h1>Powered Storage</h1>
+        <p class="dek">They had an empty lot and no name for what they were renting out.</p>
+      </div>
+      <p class="label tags">Brand Identity &middot; Digital Platform &middot; GTM</p>
+    </div>
   </section>
 
-  <section class="section wrap prose">
+  <section class="section wrap case-body">
     <p class="eyebrow">On demand storage, RV power and work containers &middot; North Carolina</p>
-    <h1>Powered Storage</h1>
+    <div class="prose">
+      <p>
+        On demand storage. RV power pedestals. Work containers for tradesmen. Flex space,
+        secured and climate controlled. None of it fit a category people already searched for.
+        The offer wasn't the problem. Nobody knew to look for it yet, so the brand and the site
+        had to teach the market the category existed before anyone could sell into it.
+      </p>
 
-    <p class="dek">They had an empty lot and no name for what they were renting out.</p>
+      <p>
+        The work covers identity, the investor and brand materials, ad graphics for the
+        individual services (RV power, work containers, flex space), and the website. Different
+        audiences, one system: a tradesman looking for a place to park a container and an
+        investor looking at the same company both had to read it clearly.
+      </p>
 
-    <p>
-      On demand storage. RV power pedestals. Work containers for tradesmen. Flex space,
-      secured and climate controlled. None of it fit a category people already searched for.
-      The offer wasn't the problem. Nobody knew to look for it yet, so the brand and the site
-      had to teach the market the category existed before anyone could sell into it.
-    </p>
-
-    <p>
-      The work covers identity, the investor and brand materials, ad graphics for the
-      individual services (RV power, work containers, flex space), and the website. Different
-      audiences, one system: a tradesman looking for a place to park a container and an
-      investor looking at the same company both had to read it clearly.
-    </p>
-
-    <p class="outcome">Filled the yard. Retained tenants. Built the local reputation from zero.</p>
+      <p class="outcome">Filled the yard. Retained tenants. Built the local reputation from zero.</p>
+    </div>
   </section>
 
   <section class="shots">
@@ -47,24 +54,40 @@ const shots = ["PS7", "PS8", "PS9", "PS10", "PS12"]
   </section>
 
   <section class="section wrap next">
-    <a class="btn btn-ghost" href="/work/">&larr; Back to work</a>
+    <a class="link-arrow" href="/work/">&larr; Back to work</a>
   </section>
 </Base>
 
 <style>
-  .hero { background: #0e0e0e; }
-  .hero :global(img) { width: 100%; height: auto; display: block; }
-  .dek {
-    font-family: var(--font-display);
-    font-size: clamp(20px, 3vw, 26px);
-    font-weight: 600;
-    margin-block: 20px 28px;
+  .case-hero { padding-block-end: 0; }
+  .hero-frame { background: var(--surface-subtle); }
+  .hero-frame :global(img) { width: 100%; height: auto; display: block; }
+  .case-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-block-start: 32px;
+    border-top: 1px solid var(--line);
+    margin-block-start: 32px;
   }
-  .prose p { margin-block-end: 20px; color: var(--ink); }
+  .case-meta h1 { font-weight: 300; font-size: clamp(28px, 4vw, 40px); }
+  .dek {
+    max-width: 46ch;
+    color: var(--muted);
+    font-size: 18px;
+    margin-block-start: 12px;
+  }
+  .tags { white-space: nowrap; padding-block-start: 6px; }
+
+  .case-body { padding-block-start: 0; }
+  .case-body .eyebrow { margin-block-end: 28px; display: block; }
+  .case-body p:not(.eyebrow) { margin-block-end: 20px; color: var(--ink); }
   .outcome {
     font-family: var(--font-display);
     font-weight: 600;
-    color: var(--accent);
+    color: var(--ink);
   }
   .shots {
     background: var(--gallery-ground);

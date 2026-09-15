@@ -71,11 +71,25 @@ around 522px instead of 380px) — verified at that width instead: no horizontal
 single-column layout holds (CSS breakpoint is 720px, so 380 should behave the same, but
 this isn't a substitute for the literal 380px check). Committed to git.
 
-**Next action (Zoltán):** confirm the 380px view yourself (`npm run dev`, phone-width
-browser) since the tool couldn't get there, and say which of the 17 gallery clients get a
-full case study page next.
+**Design system swapped to Figma (2026-09-15):** Zoltán brought his own Figma design system
+(file "Clarity Republic," `Clarity 3.0` page, "Visual Foundation — Design System" frame) to
+replace the CR 3.0-adapted tokens. Full swap, confirmed by Zoltán over the tokens-only or
+mockup-first alternatives. Rebuilt: `tokens.css` (monochrome — ink `#0F0F0F`, no accent;
+Sora weight-by-size + Instrument Serif; 8px spacing scale), nav weight, homepage (centered
+thin-display hero with eyebrow below headline, services as a numbered 01/02/03 list instead
+of cards, About as an asymmetric split with a Focus/Approach/Location facts column), the
+work gallery, and the Powered Storage case study header (contained image, title+dek left,
+category tags right — matches Section 5's own "Powered Storage" composition, tags "Brand
+Identity · Digital Platform · GTM" taken directly from it). Checked in browser at 1440px,
+clean. Detail in `CLAUDE.md` under Direction. Not yet re-verified at phone width after this
+change.
 
-**After that:** build the next case study page(s), then roll out beyond the pilot category.
+**Next action (Zoltán):** review the redesign (`npm run dev`) at phone and desktop width,
+and say which of the 17 gallery clients get a full case study page next — the new
+case-study template should carry over to whichever client is next.
+
+**After that:** build the next case study page(s) to the new template, then roll out beyond
+the pilot category.
 
 **Open, decide when it comes up:** site name and domain; whether the services block shows prices; which clients get a full case study
 page and which stay gallery-only.

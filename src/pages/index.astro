@@ -10,8 +10,8 @@ const featured = ["ps", "schropp", "fintech", "waller"]
 ---
 <Base title="Zoltán Kosa-Szántó — Brand, web and product design">
   <section class="hero section wrap">
-    <p class="eyebrow">Brand, web and UX &middot; Budapest, working across the US and Europe</p>
-    <h1>Twenty five years making a business easy to understand.</h1>
+    <h1 class="display">Twenty five years making a business easy to understand.</h1>
+    <p class="eyebrow tagline">Brand, web and UX &middot; Budapest, working across the US and Europe</p>
     <p class="prose lead">
       Identity, websites and the product decisions around them. Trained at SVA and SUNY
       Purchase in New York, working in English and Hungarian.
@@ -25,7 +25,7 @@ const featured = ["ps", "schropp", "fintech", "waller"]
   <section class="featured">
     <div class="wrap head">
       <h2>Selected work</h2>
-      <a class="see-all" href="/work/">All of it &rarr;</a>
+      <a class="link-arrow" href="/work/">All of it &rarr;</a>
     </div>
     <div class="wrap grid">
       {featured.map(({ slug, ...client }) => (
@@ -35,50 +35,83 @@ const featured = ["ps", "schropp", "fintech", "waller"]
   </section>
 
   <section id="services" class="section wrap services">
-    <p class="eyebrow">How this usually goes</p>
+    <p class="label">How this usually goes</p>
     <h2>Three ways in, in the order the work happens.</h2>
-    <div class="cards">
-      <div class="scard">
-        <h3>Positioning</h3>
-        <p>Interviews, market research, a look at your customers. What comes out is one
-        document: what you're worth, who it's for, how to say it, and the words to use
-        everywhere after. Around two weeks.</p>
-      </div>
-      <div class="scard">
-        <h3>Design and build</h3>
-        <p>Website, brand, deck, ads. Whatever the positioning points to, built. No package,
-        because no two of these look the same. Projects generally start around $15,000, fixed
-        quote after the call.</p>
-      </div>
-      <div class="scard">
-        <h3>Ongoing</h3>
-        <p>Someone accountable for it as the business changes. New offers, new markets, the
-        site and the message keep pace instead of falling a year behind. $1,750 a month, a
-        12 month term.</p>
-      </div>
-    </div>
+    <ol class="list">
+      <li>
+        <span class="num">01</span>
+        <div>
+          <h3>Positioning</h3>
+          <p>Interviews, market research, a look at your customers. What comes out is one
+          document: what you're worth, who it's for, how to say it, and the words to use
+          everywhere after. Around two weeks.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div>
+          <h3>Design and build</h3>
+          <p>Website, brand, deck, ads. Whatever the positioning points to, built. No package,
+          because no two of these look the same. Projects generally start around $15,000, fixed
+          quote after the call.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div>
+          <h3>Ongoing</h3>
+          <p>Someone accountable for it as the business changes. New offers, new markets, the
+          site and the message keep pace instead of falling a year behind. $1,750 a month, a
+          12 month term.</p>
+        </div>
+      </li>
+    </ol>
     <p class="note">Going straight to design gets you better looking material. Not
     necessarily better customers or better deals, so the order matters.</p>
   </section>
 
   <section id="about" class="section wrap about">
-    <p class="eyebrow">About</p>
-    <h2>A specialist will beat me at his one part. That's fine.</h2>
-    <p class="prose">
-      The job isn't winning any single part of the work. It's knowing what the whole thing has
-      to add up to, and catching the piece that's going to break while it's still a
-      conversation, not after it's built. Most of what I do starts with questions, not
-      opinions. The build runs through long-term collaborators; the decisions stay mine, and
-      how you run your company stays yours.
-    </p>
-    <a class="btn" href="mailto:zoltan@clarityrepublic.com">Book a call</a>
+    <p class="label">About</p>
+    <div class="split">
+      <div class="copy">
+        <h2>A specialist will beat me at his one part. That's fine.</h2>
+        <p class="prose">
+          The job isn't winning any single part of the work. It's knowing what the whole thing
+          has to add up to, and catching the piece that's going to break while it's still a
+          conversation, not after it's built. Most of what I do starts with questions, not
+          opinions.
+        </p>
+        <a class="btn" href="mailto:zoltan@clarityrepublic.com">Book a call</a>
+      </div>
+      <div class="facts">
+        <div class="fact">
+          <p class="label">Focus</p>
+          <p>Identity, websites and the product decisions around them.</p>
+        </div>
+        <div class="fact">
+          <p class="label">Approach</p>
+          <p>No layers. The build runs through long-term collaborators; the decisions stay
+          mine, and how you run your company stays yours.</p>
+        </div>
+        <div class="fact">
+          <p class="label">Location</p>
+          <p>Budapest, working across the US and Europe.</p>
+        </div>
+      </div>
+    </div>
   </section>
 </Base>
 
 <style>
-  .hero { padding-block-end: 0; }
-  .lead { max-width: 56ch; color: var(--muted); margin-block: 20px 32px; }
-  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero { text-align: center; padding-block-end: 0; }
+  .tagline { margin-block-start: 24px; }
+  .lead {
+    max-width: 56ch;
+    color: var(--muted);
+    margin-block: 20px 32px;
+    margin-inline: auto;
+  }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
   .featured {
     background: var(--gallery-ground);
@@ -95,8 +128,7 @@ const featured = ["ps", "schropp", "fintech", "waller"]
     gap: 16px;
     flex-wrap: wrap;
   }
-  .see-all { text-decoration: none; color: var(--gallery-muted); font-size: 15px; }
-  .see-all:hover { color: var(--accent); }
+  .featured .link-arrow { color: var(--gallery-ink); }
   .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -106,17 +138,33 @@ const featured = ["ps", "schropp", "fintech", "waller"]
   .featured :global(.line) { color: var(--gallery-muted); }
   .featured :global(.eyebrow) { color: var(--gallery-muted); }
 
-  .services h2 { margin-block: 12px 40px; max-width: 20ch; }
-  .cards {
+  .services h2 { margin-block: 12px 40px; max-width: 22ch; }
+  .list { list-style: none; margin: 0; padding: 0; }
+  .list li {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    padding-block: 32px;
+    border-top: 1px solid var(--line);
   }
-  @media (min-width: 720px) { .cards { grid-template-columns: repeat(3, 1fr); } }
-  .scard h3 { margin-block-end: 12px; }
-  .scard p { color: var(--muted); }
-  .note { margin-block-start: 40px; color: var(--muted); max-width: 60ch; }
+  .list li:last-child { border-bottom: 1px solid var(--line); }
+  .num {
+    font-family: var(--font-display);
+    font-weight: 100;
+    font-size: 40px;
+    color: var(--faint);
+    line-height: 1;
+  }
+  .list h3 { margin-block-end: 10px; }
+  .list p { color: var(--muted); max-width: 60ch; }
+  .note { margin-block-start: 32px; color: var(--muted); max-width: 60ch; }
 
-  .about h2 { margin-block: 12px 24px; max-width: 22ch; }
-  .about .prose { color: var(--ink); margin-block-end: 28px; }
+  .about .split { margin-block-start: 32px; display: grid; grid-template-columns: 1fr; gap: 48px; }
+  @media (min-width: 860px) { .about .split { grid-template-columns: 3fr 2fr; } }
+  .about h2 { margin-block-end: 20px; max-width: 20ch; }
+  .about .copy .prose { color: var(--ink); margin-block-end: 28px; }
+  .facts { display: flex; flex-direction: column; gap: 24px; }
+  .fact { padding-block-start: 20px; border-top: 1px solid var(--line); }
+  .fact .label { margin-block-end: 8px; }
+  .fact p:last-child { color: var(--muted); }
 </style>

@@ -1,30 +1,33 @@
 /*
-  Tokens, adapted from Clarity Republic 3.0's design system
-  (~/Documents/Clarity Republic 3.0/reference/design-system.md), held loosely per this
-  project's CLAUDE.md: same ink/paper/accent family and type logic, departing where a
-  portfolio needs full-bleed imagery and a darker gallery ground.
+  Tokens, pulled from the Figma design system (Clarity Republic file, "Visual Foundation
+  — Design System" frame: Sections 1-5) per this project's CLAUDE.md direction — held
+  loosely, but the visual language (monochrome, Sora + Instrument Serif, this type/spacing
+  scale) is the real spec now, not an adaptation of CR 3.0's old berry-accent system.
 */
 
 :root {
-  --ink: #161616;
-  --paper: #FAF9F7;
-  --accent: #A31E5C;
-  --muted: #6B6B6B;
-  --line: #E4E1DC;
+  --ink: #0F0F0F;
+  --paper: #FFFFFF;
+  --muted: #555555;      /* Text/Secondary */
+  --tertiary: #8A8A8A;   /* Text/Tertiary */
+  --faint: #B0B0B0;      /* Text/Muted */
+  --line: #E5E5E3;       /* Border/Hairline */
+  --line-strong: #CCCCCC;/* Border/Strong */
+  --surface-subtle: #F7F7F5;
+  --surface-muted: #EFEFED;
 
-  /* Portfolio-only departure: a darker ground for image-heavy gallery sections,
-     so full-bleed photography doesn't sit on the same warm paper as reading text. */
-  --gallery-ground: #141414;
-  --gallery-ink: #F2F0ED;
-  --gallery-muted: #A8A29C;
+  --gallery-ground: #0F0F0F;
+  --gallery-ink: #FFFFFF;
+  --gallery-muted: #A0A0A0;
 
   --font-display: "Sora", "Avenir Next", system-ui, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-body: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
 
   --content-max: 740px;
   --wide-max: 1280px;
 
-  --space-section-desktop: 112px;
+  --space-section-desktop: 128px;
   --space-section-mobile: 64px;
 }
 
@@ -40,41 +43,59 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; display: block; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.1;
   margin: 0;
 }
 
-h1 { font-size: clamp(32px, 6vw, 56px); }
-h2 { font-size: clamp(26px, 4vw, 36px); }
-h3 { font-size: clamp(18px, 2.4vw, 22px); }
+.display {
+  font-family: var(--font-display);
+  font-weight: 100;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin: 0;
+  font-size: clamp(40px, 7vw, 96px);
+}
+h1 { font-weight: 300; font-size: clamp(32px, 5.5vw, 56px); }
+h2 { font-weight: 300; font-size: clamp(26px, 4vw, 40px); }
+h3 { font-weight: 400; font-size: clamp(20px, 2.6vw, 28px); }
+h4 { font-weight: 600; font-size: 20px; }
 
 p { margin: 0; }
 
 a { color: inherit; }
 
-.eyebrow {
+.eyebrow, .label {
   font-family: var(--font-display);
-  font-size: 13px;
-  letter-spacing: 0.09em;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.editorial {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.25;
+  letter-spacing: 0;
 }
 
 .wrap {
   max-width: var(--wide-max);
   margin-inline: auto;
-  padding-inline: clamp(20px, 5vw, 56px);
+  padding-inline: clamp(20px, 5vw, 80px);
 }
 
 .prose {
@@ -96,15 +117,23 @@ a { color: inherit; }
   font-weight: 600;
   font-size: 15px;
   color: var(--paper);
-  background: var(--accent);
+  background: var(--ink);
   padding: 12px 22px;
   border-radius: 3px;
   text-decoration: none;
 }
-.btn:hover { opacity: 0.9; }
+.btn:hover { opacity: 0.85; }
 
 .btn-ghost {
   color: var(--ink);
   background: none;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
 }
+
+.link-arrow {
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink);
+}
+.link-arrow:hover { opacity: 0.7; }
