@@ -112,6 +112,17 @@ grids). Verified with a same-origin iframe pinned to 380px width (the real `resi
 tool still won't hold a literal 380px this session) — `scrollWidth` now equals `clientWidth`
 on `/`, `/work/`, and the Powered Storage case study, no horizontal overflow.
 
+**Mobile lightbox + card layout (2026-09-15):** lightbox on mobile now runs the image full
+width with prev/next/count moved into a control row below it instead of overlaid on the
+sides (`Lightbox.astro`, grid layout under 640px). `ClientCard.astro` eyebrow moved to sit
+under the heading instead of above it. Pushed.
+
+**About photo added (2026-09-15):** a portrait of Zoltán now sits beside the "About" copy on
+the homepage (`raw/about/headshot.jpg`, from the portrait PSD in Dropbox `Clarity Republic/
+07-imagery`, flattened via `sips`). Three-column split on desktop (photo · copy · facts),
+stacks full-width above the copy on mobile. Checked in browser at 1440px and 380px, no
+overflow. Not yet pushed — flag if a different/updated photo should replace it later.
+
 **Next action (Zoltán):** review the redesign + gallery/lightbox (`npm run dev`) at phone
 and desktop width, and say which of the 17 gallery clients get a full case study page next
 — the new case-study template (and `<Gallery>`) should carry over to whichever client is

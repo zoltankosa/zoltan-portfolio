@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import ClientCard from "../components/ClientCard.astro";
 import { getClients } from "../lib/manifest";
+import headshot from "../../raw/about/headshot.jpg";
 
 const clients = getClients();
 const featured = ["ps", "schropp", "leeyuen", "haso"]
@@ -73,6 +75,7 @@ const featured = ["ps", "schropp", "leeyuen", "haso"]
   <section id="about" class="section wrap about">
     <p class="label">About</p>
     <div class="split">
+      <Image class="portrait" src={headshot} alt="Zoltán Kosa-Szántó" width={480} height={600} loading="lazy" />
       <div class="copy">
         <h2>A specialist will beat me at his one part. That's fine.</h2>
         <p class="prose">
@@ -159,8 +162,21 @@ const featured = ["ps", "schropp", "leeyuen", "haso"]
   .list p { color: var(--muted); max-width: 60ch; }
   .note { margin-block-start: 32px; color: var(--muted); max-width: 60ch; }
 
-  .about .split { margin-block-start: 32px; display: grid; grid-template-columns: 1fr; gap: 48px; }
-  @media (min-width: 860px) { .about .split { grid-template-columns: 3fr 2fr; } }
+  .about .split { margin-block-start: 32px; display: grid; grid-template-columns: 1fr; gap: 32px; }
+  @media (min-width: 860px) {
+    .about .split {
+      grid-template-columns: 200px 3fr 2fr;
+      column-gap: 48px;
+      align-items: start;
+    }
+  }
+  .about .portrait {
+    width: 160px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: var(--surface-muted);
+  }
+  @media (min-width: 860px) { .about .portrait { width: 100%; } }
   .about h2 { margin-block-end: 20px; max-width: 20ch; }
   .about .copy .prose { color: var(--ink); margin-block-end: 28px; }
   .facts { display: flex; flex-direction: column; gap: 24px; }
