@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import { getRawImage } from "../lib/images";
+import { getCover, getShots, type ManifestClient } from "../lib/manifest";
+
+interface Props {
+  slug: string;
+  client: ManifestClient;
+  href?: string;
+}
+const { slug, client, href } = Astro.props;
+const cover = getCover(client);
+const shots = getShots(client).slice(0, 3);
+const coverImg = cover ? getRawImage(slug, cover.label) : undefined;
+const Tag = href ? "a" : "div";
+---
+<Tag class="card" href={href}>
+  <div class="cover">
+    {coverImg && (
+      <Image src={coverImg} alt={`${client.name}, cover image`} widths={[480, 800, 1200]} sizes="(min-width: 860px) 60vw, 100vw" />
+    )}
+  </div>
+  <div class="meta">
+    <p class="eyebrow">{client.sector}</p>
+    <h3>{client.name}{href && <span class="arrow"> &rarr;</span>}</h3>
+    <p class="line">{client.line}</p>
+    {shots.length > 0 && (
+      <div class="strip">
+        {shots.map((s) => {
+          const img = getRawImage(slug, s.label);
+          return img ? <Image src={img} alt="" widths={[240, 400]} sizes="200px" loading="lazy" /> : null;
+        })}
+      </div>
+    )}
+  </div>
+</Tag>
+
+<style>
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .cover {
+    background: #0e0e0e;
+    overflow: hidden;
+  }
+  .cover :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .meta { padding-block-start: 18px; }
+  h3 { margin-block-end: 6px; }
+  .arrow { color: var(--accent); }
+  .line { color: var(--muted); max-width: 60ch; }
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .strip :global(img) {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+</style>

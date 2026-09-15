@@ -47,6 +47,8 @@ Mine these before writing anything fresh. His recorded words beat generated draf
 | His voice, 40,000 words recorded | `~/Documents/2026Claude/Clarity Republic/clients-raw-dump-interview-2026-08-19.md` | voice and facts |
 | Powered Storage / Maat evidence | `~/Documents/2026Claude/Clarity Republic/clients-raw-dump-powered-storage-DRAFT.md` | source |
 | Copy he killed, with his reasons | `~/Documents/2026Claude/Clarity Republic/00-brand-story/rejected.md` | taste reference |
+| Logofolio page: intro, 4 step process, project titles, image map | `content/logofolio-source.md` (captured from zoltankosalogodesign.myportfolio.com, images in `raw/logofolio/`) | source, adapt freely; never the fintech logo |
+| Haso case text: client, challenge, approach, outcome | `content/haso-behance-source.md` (Behance project capture) | source, adapt freely |
 | Past clients, raw notes | `~/Documents/2026Claude/Clarity Republic/clients-raw-dump.md` | **read only, not a source** until Zoltán clears it |
 
 ## Images
@@ -54,6 +56,23 @@ Mine these before writing anything fresh. His recorded words beat generated draf
 - **Source:** `~/Library/CloudStorage/Dropbox/_Portfolio Zoltan`, organized 2026-09-14 by
   discipline, one folder per client (see its `_README.txt`). For a client with no usable
   export, the source files are in `~/Library/CloudStorage/Dropbox/_Design Work`.
+- **Behance beats Dropbox** (Zoltán, 2026-09-14): `behance.net/zoltankosa` holds better versions
+  of many exports. Where an image exists in both, use the Behance one (match by image
+  fingerprint, not filename). Download the `source` size; Behance-only work can be picked too.
+- **Other image sources used:** `Dropbox/_01 Eric Davis - Zoltan Kosa - Design/_Ploof Road`
+  (Powered Storage, Work Containers, Flex Town; leave decks out, they may carry Maat figures)
+  and live captures of powered-storage.com (Playwright with local Chrome, desktop + phone).
+- **Powered Storage graphics:** `_Ploof Road/Decks/` (investor deck cover pages, InDesign PDFs)
+  and `_Ploof Road/Marketing/` (print ads, Craigslist banners) hold the designed pieces, not
+  just `Photos & Video/`. Prefer these over plain exterior/site photos when the ask is for
+  graphics.
+- **Emerging Property** images live at Dropbox top level `EP Designs old/`, separate from
+  `_Portfolio Zoltan`. Unlike that folder it was never reorganised: no ready JPG/PDF exports,
+  everything is InDesign/PSD source, huge files. Files dated 2015–16; confirm the client
+  relationship is still current before publishing anything from it.
+- **Logos:** Zoltán's logofolio site (`zoltankosalogodesign.myportfolio.com`) is the first logo
+  source, then Behance, then Dropbox `03 Logos & Identity`. Paynuity logos and the "Create"
+  mark never go on the site: a logo is the client's name.
 - **Never modify, move or delete anything in Dropbox from this project.** Read, pick, copy
   out.
 - About 15% of those files are online-only. Opening one downloads it: fine for picked

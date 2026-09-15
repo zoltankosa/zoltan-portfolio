@@ -1,0 +1,50 @@
+---
+import Base from "../../layouts/Base.astro";
+import ClientCard from "../../components/ClientCard.astro";
+import { getClients } from "../../lib/manifest";
+
+const clients = getClients();
+// One case study built so far; the rest are gallery-only until Zoltán picks more.
+const CASE_STUDY_SLUGS: Record<string, string> = {
+  ps: "/work/powered-storage/",
+};
+---
+<Base title="Work — Zoltán Kosa-Szántó" description="Selected brand, web and product design work across storage, land, fintech and more.">
+  <section class="section wrap intro">
+    <p class="eyebrow">Pilot &middot; Websites &amp; UI</p>
+    <h1>Work</h1>
+    <p class="prose lead">A first pass across the clients worth showing. More categories and full write-ups follow.</p>
+  </section>
+
+  <section class="gallery">
+    <div class="wrap grid">
+      {clients.map(({ slug, ...client }) => (
+        <ClientCard slug={slug} client={client} href={CASE_STUDY_SLUGS[slug]} />
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .intro { padding-block-end: 0; }
+  .lead { margin-top: 12px; color: var(--muted); }
+  .gallery {
+    background: var(--gallery-ground);
+    color: var(--gallery-ink);
+    padding-block: var(--space-section-mobile);
+    margin-top: 48px;
+  }
+  @media (min-width: 860px) {
+    .gallery { padding-block: var(--space-section-desktop); }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px 48px;
+  }
+  @media (min-width: 720px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
+  .gallery :global(.line) { color: var(--gallery-muted); }
+  .gallery :global(.eyebrow) { color: var(--gallery-muted); }
+</style>

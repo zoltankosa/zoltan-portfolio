@@ -1,0 +1,110 @@
+/*
+  Tokens, adapted from Clarity Republic 3.0's design system
+  (~/Documents/Clarity Republic 3.0/reference/design-system.md), held loosely per this
+  project's CLAUDE.md: same ink/paper/accent family and type logic, departing where a
+  portfolio needs full-bleed imagery and a darker gallery ground.
+*/
+
+:root {
+  --ink: #161616;
+  --paper: #FAF9F7;
+  --accent: #A31E5C;
+  --muted: #6B6B6B;
+  --line: #E4E1DC;
+
+  /* Portfolio-only departure: a darker ground for image-heavy gallery sections,
+     so full-bleed photography doesn't sit on the same warm paper as reading text. */
+  --gallery-ground: #141414;
+  --gallery-ink: #F2F0ED;
+  --gallery-muted: #A8A29C;
+
+  --font-display: "Sora", "Avenir Next", system-ui, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --content-max: 740px;
+  --wide-max: 1280px;
+
+  --space-section-desktop: 112px;
+  --space-section-mobile: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--paper);
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 { font-size: clamp(32px, 6vw, 56px); }
+h2 { font-size: clamp(26px, 4vw, 36px); }
+h3 { font-size: clamp(18px, 2.4vw, 22px); }
+
+p { margin: 0; }
+
+a { color: inherit; }
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wrap {
+  max-width: var(--wide-max);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 56px);
+}
+
+.prose {
+  max-width: var(--content-max);
+}
+
+.section {
+  padding-block: var(--space-section-mobile);
+}
+@media (min-width: 860px) {
+  .section { padding-block: var(--space-section-desktop); }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--paper);
+  background: var(--accent);
+  padding: 12px 22px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.btn:hover { opacity: 0.9; }
+
+.btn-ghost {
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--line);
+}

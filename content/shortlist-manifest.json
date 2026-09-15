@@ -1,0 +1,716 @@
+{
+ "_meta": {
+  "generated": "2026-09-14",
+  "source_artifact": "https://claude.ai/code/artifact/192663a7-086c-49f2-9f6b-0b9bab14bb54",
+  "note": "Approved shortlist after Zoltan's tick-and-delete removals. src paths point at contact-sheet preview copies (max ~1000px, not full source resolution) -- re-fetch full source for raw/ before final build: Behance images at 'source' size, Dropbox/_Design Work files at original resolution, PDF-derived pages re-rendered at higher DPI, live captures re-taken full-resolution."
+ },
+ "clients": {
+  "ps": {
+   "name": "Powered Storage",
+   "sector": "On demand storage, RV power and work containers, North Carolina",
+   "line": "They had an empty lot and no name for what they were renting out. Investor decks, ad graphics, Craigslist banners and brand identity, built so the market learned the category existed.",
+   "items": [
+    {
+     "label": "PS1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/ps-new-0.jpg",
+     "source_note": "_Ploof Road/Decks/_old/2022 Work Containers Investor/Work Containers Investor Deck May 31 2022.pdf · investor deck cover"
+    },
+    {
+     "label": "PS7",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/ps-1.jpg",
+     "source_note": "_Ploof Road/Brand/Identity/powered-storage-brand-identity.pdf  (page 1)"
+    },
+    {
+     "label": "PS8",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/ps-3.jpg",
+     "source_note": "_Ploof Road/Brand/Business Card/Powered Storage Eric Davis Business Card/Powered-Storage Eric Davis Business Card Back.jpg"
+    },
+    {
+     "label": "PS9",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/ps-9.jpg",
+     "source_note": "_Ploof Road/Photos & Video/_4 Work Containers/09 Web Ads/wc-ad-workshop-containers-2023-08-24.jpg"
+    },
+    {
+     "label": "PS10",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/psweb-0.jpg",
+     "source_note": "powered-storage.com live capture, Home, desktop (full page kept)"
+    },
+    {
+     "label": "PS12",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/psweb-2.jpg",
+     "source_note": "powered-storage.com live capture, Map and prices, desktop (full page kept)"
+    }
+   ]
+  },
+  "schropp": {
+   "name": "Schropp",
+   "sector": "Sustainable packaging manufacturer, Germany",
+   "line": "A packaging maker competing against companies that already looked the part. Logo, brand identity, product mockups and the sales brochure.",
+   "items": [
+    {
+     "label": "SCH1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/bx-sch1.jpg",
+     "source_note": "Behance: Environmentally friendly brand design, image 1 · replaces Dropbox copy"
+    },
+    {
+     "label": "SCH2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-sch2.jpg",
+     "source_note": "Behance: Environmentally friendly brand design, image 2 · replaces Dropbox copy"
+    },
+    {
+     "label": "SCH3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/schropp-2.jpg",
+     "source_note": "_Portfolio Zoltan/04 Brochures, Decks & Print/Schropp/4-Cups.jpg"
+    },
+    {
+     "label": "SCH4",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/schropp-3.jpg",
+     "source_note": "_Design Work/Schropp - Sven Schropp/Graphic Design/Schropp files from Davor V1/Mockups/Mockup Image - Lid.jpg"
+    },
+    {
+     "label": "SCH5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/schropp-4.jpg",
+     "source_note": "_Design Work/Schropp - Sven Schropp/Graphic Design/Schropp files from Davor V1/Mockups/Two Cups Mockup.jpg"
+    },
+    {
+     "label": "SCH6",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/schropp-5.jpg",
+     "source_note": "_Design Work/Schropp - Sven Schropp/Graphic Design/Schropp files from Davor V1/Mockups/Schropp - Bakery Bags.jpg"
+    },
+    {
+     "label": "SCH7",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-sch7.jpg",
+     "source_note": "Behance: Environmentally friendly brand design, image 4 · replaces Dropbox copy"
+    }
+   ]
+  },
+  "emergingproperty": {
+   "name": "Emerging Property",
+   "sector": "Property investment, United Kingdom",
+   "line": "UK yield-driven property investment specialist. Investor-report and brochure design plus architectural CGI renders for student and residential developments: Tudor Studios (Leicester), Jubilee Court (Preston), Park Lane.",
+   "items": [
+    {
+     "label": "EP2",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/ep-1.jpg",
+     "source_note": "EP Designs old/00 ExCel Exhibitions/00 ExCel Flyer 2016/flyer/EP-flyer-a4-297mmx210mm-trifold.pdf · exhibition brochure, interior spread"
+    }
+   ]
+  },
+  "fintech": {
+   "name": "Fintech, anonymised",
+   "sector": "Digital payments platform",
+   "line": "Art direction for a suite of 12 illustrations used as brand differentiators and visual support for the messaging. Drawn by illustrators Nina Aubersek and Mikhail Voitik under Zoltán's direction.",
+   "items": [
+    {
+     "label": "FIN1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/fin-0.jpg",
+     "source_note": "Behance: Creative Direction / Illustration for Fintech · Cover: art direction brief and Safe Multichannel Payment Processing"
+    },
+    {
+     "label": "FIN2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/fin-1.jpg",
+     "source_note": "Behance: Creative Direction / Illustration for Fintech · Bank Integration with Payment Platform"
+    },
+    {
+     "label": "FIN3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/fin-2.jpg",
+     "source_note": "Behance: Creative Direction / Illustration for Fintech · Easy Global Digital Payments"
+    },
+    {
+     "label": "FIN4",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/fin-3.jpg",
+     "source_note": "Behance: Creative Direction / Illustration for Fintech · Seamless Mobile Payment"
+    },
+    {
+     "label": "FIN5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/fin-4.jpg",
+     "source_note": "Behance: Creative Direction / Illustration for Fintech · Underwriting and Background Check"
+    }
+   ]
+  },
+  "demandiq": {
+   "name": "Demand IQ",
+   "sector": "Clean energy, Denver",
+   "line": "The website, its component library, and a calculator that showed a homeowner what switching to solar would save.",
+   "items": [
+    {
+     "label": "DIQ1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/demandiq-0.jpg",
+     "source_note": "Demand IQ/images/demand-iq-home-page-responsive-devices_01.jpg"
+    },
+    {
+     "label": "DIQ2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/demandiq-1.jpg",
+     "source_note": "Demand IQ/behance-thumbnails.jpg"
+    },
+    {
+     "label": "DIQ3",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/demandiq-2.jpg",
+     "source_note": "Demand IQ/desktop/Home 1.png"
+    },
+    {
+     "label": "DIQ4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/demandiq-3.jpg",
+     "source_note": "Demand IQ/desktop/Managed Services.png"
+    },
+    {
+     "label": "DIQ6",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-diq6.jpg",
+     "source_note": "Behance: Website UI/UX prototype design, image 9 · replaces Dropbox copy"
+    }
+   ]
+  },
+  "newera": {
+   "name": "New Era",
+   "sector": "High precision converting machinery, via Crystalcore",
+   "line": "The website rebuilt around how a buyer finds a machine.",
+   "items": [
+    {
+     "label": "NE1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/bx-ne1.jpg",
+     "source_note": "Behance: Web design for machinery manufacturer, image 1 · replaces Dropbox copy"
+    },
+    {
+     "label": "NE2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-ne2.jpg",
+     "source_note": "Behance: Web design for machinery manufacturer, image 2 · replaces Dropbox copy"
+    },
+    {
+     "label": "NE3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-ne3.jpg",
+     "source_note": "Behance: Web design for machinery manufacturer, image 4 · replaces Dropbox copy"
+    },
+    {
+     "label": "NE4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/bx-ne4.jpg",
+     "source_note": "Behance: Web design for machinery manufacturer, image 3 · replaces Dropbox copy"
+    }
+   ]
+  },
+  "leeyuen": {
+   "name": "Lee Yuen",
+   "sector": "Signage and lighting, Hong Kong",
+   "line": "Brand identity and the website. The site shows luxury storefront work; client names unverified.",
+   "items": [
+    {
+     "label": "LY1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/leeyuen-0.jpg",
+     "source_note": "_Design Work/self promo/lee-yuen-1.jpg"
+    },
+    {
+     "label": "LY3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/leeyuen-2.jpg",
+     "source_note": "_Design Work/Lee Yuen/lee yuen hero.jpg"
+    },
+    {
+     "label": "LY4",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/leeyuen-3.jpg",
+     "source_note": "_Design Work/Lee Yuen/leeyuen-content-2.jpg"
+    },
+    {
+     "label": "LY5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-ly5.jpg",
+     "source_note": "Behance: Logofolio, image 17 · replaces Dropbox copy"
+    }
+   ]
+  },
+  "haso": {
+   "name": "Haso",
+   "sector": "Paper based packaging, Japan and the EU",
+   "line": "Assets to get global distributors to switch from plastic to Haso's paper lids and caps: website, logo set and the story of the plastic problem.",
+   "items": [
+    {
+     "label": "HAS1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/haso-be-0.jpg",
+     "source_note": "Behance: Asset portfolio for HasoLid, image 1 · Cover on Behance: phone screens"
+    },
+    {
+     "label": "HAS2",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/haso-be-1.jpg",
+     "source_note": "Behance: Asset portfolio for HasoLid, image 2 · Haso site, dark version"
+    },
+    {
+     "label": "HAS3",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/haso-be-2.jpg",
+     "source_note": "Behance: Asset portfolio for HasoLid, image 3 · HasoLid home page"
+    }
+   ]
+  },
+  "waller": {
+   "name": "Waller County Land Co",
+   "sector": "Land broker, Texas, via Crystalcore",
+   "line": "The broker site and the property search a buyer actually uses.",
+   "items": [
+    {
+     "label": "WAL1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/bx-wal1.jpg",
+     "source_note": "Behance: Waller County Land Co, image 1 · replaces Dropbox copy"
+    },
+    {
+     "label": "WAL2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-wal2.jpg",
+     "source_note": "Behance: Waller County Land Co, image 2 · replaces Dropbox copy"
+    },
+    {
+     "label": "WAL3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-wal3.jpg",
+     "source_note": "Behance: Waller County Land Co, image 3 · replaces Dropbox copy"
+    },
+    {
+     "label": "WAL4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/waller-3.jpg",
+     "source_note": "Waller County Land Co/Desktop/Home.jpg"
+    },
+    {
+     "label": "WAL5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/waller-4.jpg",
+     "source_note": "Waller County Land Co/Desktop/Map Properties.jpg"
+    },
+    {
+     "label": "WAL6",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/waller-5.jpg",
+     "source_note": "Waller County Land Co/Desktop/Property details.jpg"
+    }
+   ]
+  },
+  "crystalcore": {
+   "name": "Crystalcore broker sites",
+   "sector": "Land broker platform, Texas",
+   "line": "The plug and play broker system. Groups four folders: Crystalcore Templates, Land Broker Websites, Vaughn Roth, Signature Ranches, Blue Mountain Ranches.",
+   "items": [
+    {
+     "label": "CC1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/crystalcore-0.jpg",
+     "source_note": "Crystalcore Templates/30-pro-in-devices mockup.jpg"
+    },
+    {
+     "label": "CC2",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/crystalcore-1.jpg",
+     "source_note": "Crystalcore Land Broker Websites/Land Broker Websites 2020.jpg"
+    },
+    {
+     "label": "CC4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/crystalcore-3.jpg",
+     "source_note": "Signature Ranches/1-home-3.jpg"
+    },
+    {
+     "label": "CC5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/crystalcore-4.jpg",
+     "source_note": "Blue Mountain Ranches/blue-mountain.jpg"
+    },
+    {
+     "label": "CC6",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/crystalcore-5.jpg",
+     "source_note": "Crystalcore Templates/34b-pro.jpg"
+    }
+   ]
+  },
+  "hypergrowth": {
+   "name": "Hypergrowth",
+   "sector": "Growth marketing agency",
+   "line": "One visual identity across a company that had several, and the website.",
+   "items": [
+    {
+     "label": "HYP1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/bx-hyp1.jpg",
+     "source_note": "Behance: Growth Marketing Website Design, image 1 · replaces Dropbox copy"
+    },
+    {
+     "label": "HYP2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-hyp2.jpg",
+     "source_note": "Behance: Growth Marketing Website Design, image 3 · replaces Dropbox copy"
+    },
+    {
+     "label": "HYP3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-hyp3.jpg",
+     "source_note": "Behance: Growth Marketing Website Design, image 6 · replaces Dropbox copy"
+    },
+    {
+     "label": "HYP4",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-hyp4.jpg",
+     "source_note": "Behance: Growth Marketing Website Design, image 5 · replaces Dropbox copy"
+    },
+    {
+     "label": "HYP5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/bx-hyp5.jpg",
+     "source_note": "Behance: Growth Marketing Website Design, image 8 · replaces Dropbox copy"
+    }
+   ]
+  },
+  "hilary": {
+   "name": "Hilary Brooks Design",
+   "sector": "Interior design studio, luxury residential",
+   "line": "Website. Not in CR 3.0 copy yet, picked on the strength of the work.",
+   "items": [
+    {
+     "label": "HB1",
+     "type": "cover",
+     "role": "Cover · top of page",
+     "src": "img/hilary-0.jpg",
+     "source_note": "Hilary Brooks Design/home – desktop.jpg"
+    },
+    {
+     "label": "HB2",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/hilary-1.jpg",
+     "source_note": "Hilary Brooks Design/gallery.jpg"
+    },
+    {
+     "label": "HB3",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/hilary-2.jpg",
+     "source_note": "Hilary Brooks Design/project detail.jpg"
+    },
+    {
+     "label": "HB4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/hilary-3.jpg",
+     "source_note": "Hilary Brooks Design/projects.jpg"
+    },
+    {
+     "label": "HB5",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/hilary-4.jpg",
+     "source_note": "Hilary Brooks Design/home - mobile.jpg"
+    }
+   ]
+  },
+  "caplid": {
+   "name": "Caplid",
+   "sector": "Plastic free wet wipe packaging",
+   "line": "Website and launch visuals. Mentioned in CR 3.0 positioning, no approved copy yet.",
+   "items": [
+    {
+     "label": "CAP1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/caplid-0.jpg",
+     "source_note": "Caplid/1-caplid-behance-cover.jpg"
+    },
+    {
+     "label": "CAP3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/caplid-2.jpg",
+     "source_note": "Caplid/home-for-desktop.jpg"
+    },
+    {
+     "label": "CAP4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/caplid-3.jpg",
+     "source_note": "Caplid/Meet Caplid.jpg"
+    }
+   ]
+  },
+  "ranchbyowner": {
+   "name": "Ranchbyowner",
+   "sector": "Land marketplace, United States",
+   "line": "A listing site where owners sell land directly, without an agent. Home, listings with map, and phone.",
+   "items": [
+    {
+     "label": "RBO1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/ranchbyowner-0.jpg",
+     "source_note": "Ranchbyowner/image_processing20200103-5309-4pdsf8.jpg"
+    },
+    {
+     "label": "RBO2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/ranchbyowner-1.jpg",
+     "source_note": "Ranchbyowner/ranchbyowner-1.jpg"
+    },
+    {
+     "label": "RBO3",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/ranchbyowner-2.jpg",
+     "source_note": "Ranchbyowner/ranchbyowner-2-details.jpg"
+    },
+    {
+     "label": "RBO4",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/ranchbyowner-3.jpg",
+     "source_note": "Ranchbyowner/ranchbyowner-3-home-mobile.jpg"
+    }
+   ]
+  },
+  "apisrex": {
+   "name": "Apis Rex",
+   "sector": "Strategy consultancy",
+   "line": "Website for a consultancy selling strategic planning, operational excellence and M&A due diligence.",
+   "items": [
+    {
+     "label": "APX1",
+     "type": "cover",
+     "role": "Cover · top of page",
+     "src": "img/apisrex-0.jpg",
+     "source_note": "Apis Rex/1-home-1.jpg"
+    },
+    {
+     "label": "APX2",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/apisrex-1.jpg",
+     "source_note": "Apis Rex/2-About-Us-1.jpg"
+    },
+    {
+     "label": "APX3",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/apisrex-2.jpg",
+     "source_note": "Apis Rex/3-Services-1.jpg"
+    }
+   ]
+  },
+  "incomeproperty": {
+   "name": "Income Property",
+   "sector": "Property investment, United Kingdom",
+   "line": "Landing pages and a downloadable sector guide for a property investment company.",
+   "items": [
+    {
+     "label": "INC1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/incomeproperty-0.jpg",
+     "source_note": "Behance: Landing pages for property investment, property-landing/01-e49b4684455487.5d5d63afd90a0.jpg"
+    },
+    {
+     "label": "INC2",
+     "type": "shot",
+     "role": "Image · top of page",
+     "src": "img/incomeproperty-1.jpg",
+     "source_note": "Behance: Landing pages for property investment, property-landing/02-625d8784455487.5d5d63afd863d.jpg"
+    },
+    {
+     "label": "INC3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/incomeproperty-2.jpg",
+     "source_note": "Behance: Landing pages for property investment, property-landing/03-ba8f2984455487.5d5d63afd89be.jpg"
+    }
+   ]
+  },
+  "silvatech": {
+   "name": "Silvatech",
+   "sector": "Forest vegetation management",
+   "line": "Website for a forestry and reforestation services firm. Captured from the live site in 2019.",
+   "items": [
+    {
+     "label": "SIL1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/silvatech-0.jpg",
+     "source_note": "Silvatech/Screen Shot 2019-12-06 at 11.48.23 AM.png"
+    },
+    {
+     "label": "SIL2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/silvatech-1.jpg",
+     "source_note": "Silvatech/Screen Shot 2019-12-06 at 11.49.06 AM.png"
+    },
+    {
+     "label": "SIL3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/silvatech-2.jpg",
+     "source_note": "Silvatech/Screen Shot 2019-12-06 at 11.49.30 AM.png"
+    },
+    {
+     "label": "SIL4",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/silvatech-3.jpg",
+     "source_note": "Silvatech/Screen Shot 2019-12-06 at 11.50.56 AM.png"
+    }
+   ]
+  },
+  "logos": {
+   "name": "Logofolio",
+   "sector": "Logos across clients",
+   "line": "Zoltán's top 10, picked from 43 logos across the logofolio site, Behance and Dropbox.",
+   "items": [
+    {
+     "label": "LOGO1",
+     "type": "cover",
+     "role": "Cover",
+     "src": "img/top-logo-0.jpg",
+     "source_note": "Powered Storage · Logofolio site"
+    },
+    {
+     "label": "LOGO2",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-1.jpg",
+     "source_note": "Lee Yuen · Logofolio site"
+    },
+    {
+     "label": "LOGO3",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-2.jpg",
+     "source_note": "Bébio · Logofolio site"
+    },
+    {
+     "label": "LOGO4",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-3.jpg",
+     "source_note": "Trouble Mantis · Logofolio site"
+    },
+    {
+     "label": "LOGO5",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-4.jpg",
+     "source_note": "Kleex · Logofolio site"
+    },
+    {
+     "label": "LOGO6",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-5.jpg",
+     "source_note": "AI Art Alliance · Logofolio site"
+    },
+    {
+     "label": "LOGO7",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-6.jpg",
+     "source_note": "DZL Workwear · Logofolio site"
+    },
+    {
+     "label": "LOGO8",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-7.jpg",
+     "source_note": "Haso cap · Logofolio site"
+    },
+    {
+     "label": "LOGO9",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-8.jpg",
+     "source_note": "Happy Baby · Behance logofolio"
+    },
+    {
+     "label": "LOGO10",
+     "type": "shot",
+     "role": "Image",
+     "src": "img/top-logo-9.jpg",
+     "source_note": "Probulus · Dropbox · 03 Logos & Identity"
+    }
+   ]
+  }
+ }
+}

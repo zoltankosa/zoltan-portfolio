@@ -1,0 +1,122 @@
+---
+import Base from "../layouts/Base.astro";
+import ClientCard from "../components/ClientCard.astro";
+import { getClients } from "../lib/manifest";
+
+const clients = getClients();
+const featured = ["ps", "schropp", "fintech", "waller"]
+  .map((slug) => clients.find((c) => c.slug === slug))
+  .filter(Boolean) as typeof clients;
+---
+<Base title="Zoltán Kosa-Szántó — Brand, web and product design">
+  <section class="hero section wrap">
+    <p class="eyebrow">Brand, web and UX &middot; Budapest, working across the US and Europe</p>
+    <h1>Twenty five years making a business easy to understand.</h1>
+    <p class="prose lead">
+      Identity, websites and the product decisions around them. Trained at SVA and SUNY
+      Purchase in New York, working in English and Hungarian.
+    </p>
+    <div class="cta-row">
+      <a class="btn" href="/work/">See the work</a>
+      <a class="btn btn-ghost" href="#services">What that looks like</a>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="wrap head">
+      <h2>Selected work</h2>
+      <a class="see-all" href="/work/">All of it &rarr;</a>
+    </div>
+    <div class="wrap grid">
+      {featured.map(({ slug, ...client }) => (
+        <ClientCard slug={slug} client={client} href={slug === "ps" ? "/work/powered-storage/" : undefined} />
+      ))}
+    </div>
+  </section>
+
+  <section id="services" class="section wrap services">
+    <p class="eyebrow">How this usually goes</p>
+    <h2>Three ways in, in the order the work happens.</h2>
+    <div class="cards">
+      <div class="scard">
+        <h3>Positioning</h3>
+        <p>Interviews, market research, a look at your customers. What comes out is one
+        document: what you're worth, who it's for, how to say it, and the words to use
+        everywhere after. Around two weeks.</p>
+      </div>
+      <div class="scard">
+        <h3>Design and build</h3>
+        <p>Website, brand, deck, ads. Whatever the positioning points to, built. No package,
+        because no two of these look the same. Projects generally start around $15,000, fixed
+        quote after the call.</p>
+      </div>
+      <div class="scard">
+        <h3>Ongoing</h3>
+        <p>Someone accountable for it as the business changes. New offers, new markets, the
+        site and the message keep pace instead of falling a year behind. $1,750 a month, a
+        12 month term.</p>
+      </div>
+    </div>
+    <p class="note">Going straight to design gets you better looking material. Not
+    necessarily better customers or better deals, so the order matters.</p>
+  </section>
+
+  <section id="about" class="section wrap about">
+    <p class="eyebrow">About</p>
+    <h2>A specialist will beat me at his one part. That's fine.</h2>
+    <p class="prose">
+      The job isn't winning any single part of the work. It's knowing what the whole thing has
+      to add up to, and catching the piece that's going to break while it's still a
+      conversation, not after it's built. Most of what I do starts with questions, not
+      opinions. The build runs through long-term collaborators; the decisions stay mine, and
+      how you run your company stays yours.
+    </p>
+    <a class="btn" href="mailto:zoltan@clarityrepublic.com">Book a call</a>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-block-end: 0; }
+  .lead { max-width: 56ch; color: var(--muted); margin-block: 20px 32px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .featured {
+    background: var(--gallery-ground);
+    color: var(--gallery-ink);
+    padding-block: var(--space-section-mobile);
+    margin-top: 56px;
+  }
+  @media (min-width: 860px) { .featured { padding-block: var(--space-section-desktop); } }
+  .head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-block-end: 40px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .see-all { text-decoration: none; color: var(--gallery-muted); font-size: 15px; }
+  .see-all:hover { color: var(--accent); }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px 48px;
+  }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .featured :global(.line) { color: var(--gallery-muted); }
+  .featured :global(.eyebrow) { color: var(--gallery-muted); }
+
+  .services h2 { margin-block: 12px 40px; max-width: 20ch; }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 720px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  .scard h3 { margin-block-end: 12px; }
+  .scard p { color: var(--muted); }
+  .note { margin-block-start: 40px; color: var(--muted); max-width: 60ch; }
+
+  .about h2 { margin-block: 12px 24px; max-width: 22ch; }
+  .about .prose { color: var(--ink); margin-block-end: 28px; }
+</style>
