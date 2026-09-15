@@ -1,20 +1,14 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { Image } from "astro:assets";
-import { getRawImage } from "../../lib/images";
+import Gallery from "../../components/Gallery.astro";
 import { getClient } from "../../lib/manifest";
 
 const client = getClient("ps")!;
-const cover = getRawImage("ps", "PS1")!;
-const shots = ["PS7", "PS8", "PS9", "PS10", "PS12"]
-  .map((label) => ({ label, img: getRawImage("ps", label) }))
-  .filter((s) => s.img);
+const labels = client.items.map((i) => i.label);
 ---
 <Base title="Powered Storage — Zoltán Kosa-Szántó" description="On demand storage, RV power and work containers, North Carolina. Brand and site work that taught the market a category it didn't have a name for yet.">
   <section class="section wrap case-hero">
-    <div class="hero-frame">
-      <Image src={cover} alt="Powered Storage brand and site work" widths={[600, 1000, 1600]} sizes="(min-width: 860px) 1280px, 100vw" priority />
-    </div>
+    <Gallery slug="ps" labels={labels} alt="Powered Storage brand and site work" ratio="16 / 9" thumbLimit={labels.length} />
     <div class="case-meta">
       <div>
         <h1>Powered Storage</h1>
@@ -45,14 +39,6 @@ const shots = ["PS7", "PS8", "PS9", "PS10", "PS12"]
     </div>
   </section>
 
-  <section class="shots">
-    <div class="wrap grid">
-      {shots.map(({ label, img }) => (
-        <Image src={img!} alt={`Powered Storage, ${label}`} widths={[400, 700, 1000]} sizes="(min-width: 860px) 50vw, 100vw" loading="lazy" />
-      ))}
-    </div>
-  </section>
-
   <section class="section wrap next">
     <a class="link-arrow" href="/work/">&larr; Back to work</a>
   </section>
@@ -60,8 +46,6 @@ const shots = ["PS7", "PS8", "PS9", "PS10", "PS12"]
 
 <style>
   .case-hero { padding-block-end: 0; }
-  .hero-frame { background: var(--surface-subtle); }
-  .hero-frame :global(img) { width: 100%; height: auto; display: block; }
   .case-meta {
     display: flex;
     justify-content: space-between;
@@ -89,21 +73,5 @@ const shots = ["PS7", "PS8", "PS9", "PS10", "PS12"]
     font-weight: 600;
     color: var(--ink);
   }
-  .shots {
-    background: var(--gallery-ground);
-    padding-block: var(--space-section-mobile);
-  }
-  @media (min-width: 860px) {
-    .shots { padding-block: var(--space-section-desktop); }
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  @media (min-width: 640px) {
-    .grid { grid-template-columns: 1fr 1fr; }
-  }
-  .grid :global(img) { width: 100%; height: auto; border-radius: 2px; }
   .next { padding-block-start: 56px; }
 </style>

@@ -35,11 +35,3 @@ export function getClients(): Array<{ slug: string } & ManifestClient> {
 export function getClient(slug: string) {
   return data.clients[slug];
 }
-
-export function getCover(client: ManifestClient): ManifestItem | undefined {
-  return client.items.find((i) => i.type === "cover") ?? client.items[0];
-}
-
-export function getShots(client: ManifestClient): ManifestItem[] {
-  return client.items.filter((i) => i.type !== "cover");
-}

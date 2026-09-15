@@ -84,9 +84,20 @@ Identity · Digital Platform · GTM" taken directly from it). Checked in browser
 clean. Detail in `CLAUDE.md` under Direction. Not yet re-verified at phone width after this
 change.
 
-**Next action (Zoltán):** review the redesign (`npm run dev`) at phone and desktop width,
-and say which of the 17 gallery clients get a full case study page next — the new
-case-study template should carry over to whichever client is next.
+**Gallery + lightbox added (2026-09-15):** every card and case study now shows a main image
+in a fixed aspect ratio (4/3 default, so the work-gallery grid aligns; case study heroes can
+override — Powered Storage uses 16/9 to match its native ratio and avoid cropping the
+headline) with a thumbnail strip underneath, all of it in a new shared
+`src/components/Gallery.astro`. Any image click opens `src/components/Lightbox.astro` (one
+global instance in `Base.astro`): full client image set, scroll or arrow-key/button
+navigation, counter, Escape/backdrop to close. Checked in browser — thumbnails, aspect
+ratios, click-to-open, arrow/keyboard nav and close all confirmed working. Detail in
+`CLAUDE.md` under Build.
+
+**Next action (Zoltán):** review the redesign + gallery/lightbox (`npm run dev`) at phone
+and desktop width, and say which of the 17 gallery clients get a full case study page next
+— the new case-study template (and `<Gallery>`) should carry over to whichever client is
+next.
 
 **After that:** build the next case study page(s) to the new template, then roll out beyond
 the pilot category.

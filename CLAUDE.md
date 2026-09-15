@@ -102,6 +102,12 @@ Mine these before writing anything fresh. His recorded words beat generated draf
   calling it done.
 - Keep interaction light: category filter, gallery, swipeable lightbox, case study pages.
   When a feature starts needing real plumbing, say so and offer the plain version first.
+- **Gallery + lightbox (built 2026-09-15):** `src/components/Gallery.astro` (main image in a
+  fixed `aspect-ratio` — 4/3 by default, override per use like the case study's 16/9 hero —
+  plus a thumbnail strip; every image is a button carrying the full image set as JSON) and
+  `src/components/Lightbox.astro` (one instance, mounted once in `Base.astro`, delegated
+  click/keyboard handling). Reuse `<Gallery>` for every new case study and for the work
+  gallery cards — don't hand-roll another image grid. Vanilla JS, no library.
 - Check for large files before the first commit that includes images.
 
 ## Working pattern
