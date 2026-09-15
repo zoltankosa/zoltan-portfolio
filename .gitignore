@@ -2,8 +2,8 @@
 node_modules/
 dist/
 .astro/
-# raw picks copied from Dropbox stay local; only optimized output is committed
-raw/
+# raw/ is tracked (needed at build time, incl. in CI for the GitHub Pages deploy) —
+# see CLAUDE.md > Images. Never PSD/AI sources or archives, those stay local.
 *.psd
 *.psb
 *.ai

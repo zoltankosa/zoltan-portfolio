@@ -90,8 +90,12 @@ Mine these before writing anything fresh. His recorded words beat generated draf
   images, never bulk-hash or bulk-open.
 - Claude views the images itself and shortlists the best per client. Zoltán approves
   shortlists; he doesn't dig through folders.
-- Picked originals go to `raw/` (git-ignored). Everything shown on the site is generated
-  from there: resizes, AVIF/WebP, crops, device frames, covers. Nothing is hand-edited.
+- Picked originals go to `raw/`. Everything shown on the site is generated from there:
+  resizes, AVIF/WebP, crops, device frames, covers. Nothing is hand-edited.
+- **`raw/` is tracked in git (2026-09-15), not git-ignored** — the GitHub Pages build runs
+  in CI on a fresh checkout, so Astro's image pipeline needs the source files actually in
+  the repo. 94MB across ~124 files at last check, nothing oversized; recheck size if a
+  future category adds a lot more.
 
 ## Build
 
