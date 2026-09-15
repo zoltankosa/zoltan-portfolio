@@ -94,6 +94,14 @@ navigation, counter, Escape/backdrop to close. Checked in browser — thumbnails
 ratios, click-to-open, arrow/keyboard nav and close all confirmed working. Detail in
 `CLAUDE.md` under Build.
 
+**Narrow-width check (2026-09-15):** `resize_window` still wouldn't hold exactly 380px this
+session (landed ~614px after a few retries) — checked at that width instead: no horizontal
+overflow anywhere (home, work gallery, case study), services list and about split both
+stack to one column, gallery thumbnails fit without needing to scroll. Fixed one real gap
+found at that width: the lightbox's fixed 56px image padding ate too much of the frame on a
+narrow viewport, now steps down under 640px. Still not the literal 380px CLAUDE.md asks
+for — flag if you spot anything off checking it yourself.
+
 **Next action (Zoltán):** review the redesign + gallery/lightbox (`npm run dev`) at phone
 and desktop width, and say which of the 17 gallery clients get a full case study page next
 — the new case-study template (and `<Gallery>`) should carry over to whichever client is
