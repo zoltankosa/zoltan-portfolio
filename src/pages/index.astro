@@ -4,7 +4,7 @@ import ClientCard from "../components/ClientCard.astro";
 import { getClients } from "../lib/manifest";
 
 const clients = getClients();
-const featured = ["ps", "schropp", "fintech", "waller"]
+const featured = ["ps", "schropp", "leeyuen", "haso"]
   .map((slug) => clients.find((c) => c.slug === slug))
   .filter(Boolean) as typeof clients;
 ---
