@@ -102,6 +102,16 @@ found at that width: the lightbox's fixed 56px image padding ate too much of the
 narrow viewport, now steps down under 640px. Still not the literal 380px CLAUDE.md asks
 for — flag if you spot anything off checking it yourself.
 
+**Mobile overflow fixed (2026-09-15):** Zoltán reported images pushing the window right on
+phone. Cause: the two-column `.grid` on `/` and `/work/` sets `grid-template-columns: 1fr`
+with no `min-width` guard, and grid items default to `min-width: auto` — for a replaced
+element like `<img>`, percentage widths don't count toward that automatic minimum, so the
+browser sized the track to the image's *intrinsic* pixel width instead of the CSS
+`width: 100%`. Fixed with `min-width: 0` on `.card` in `ClientCard.astro` (shared by both
+grids). Verified with a same-origin iframe pinned to 380px width (the real `resize_window`
+tool still won't hold a literal 380px this session) — `scrollWidth` now equals `clientWidth`
+on `/`, `/work/`, and the Powered Storage case study, no horizontal overflow.
+
 **Next action (Zoltán):** review the redesign + gallery/lightbox (`npm run dev`) at phone
 and desktop width, and say which of the 17 gallery clients get a full case study page next
 — the new case-study template (and `<Gallery>`) should carry over to whichever client is
