@@ -1,5 +1,20 @@
 # State
 
+**Pushed and deployed live (2026-09-23):** portfolio.clarityrepublic.com is up on the
+current build. This push carried the 2026-09-17 image resolution pass and gallery/lightbox
+refinements (had sat uncommitted in the working tree), plus two new changes: name corrected
+site-wide from "Zoltán Kosa-Szántó" to "Zoltan Kosa-Szantho" (no accents), and the About
+portrait swapped for a new photo (cropped 20% from top, source: WhatsApp image Zoltán sent
+2026-09-23). Verified live: 200 OK, corrected name renders.
+
+**Push access note:** repo `zoltankosa/zoltan-portfolio` is owned by GitHub account
+`zoltankosa`; the `gh`/git credential active by default in this environment is
+`zoltan-kosa-sz`, which has no write access (push returns 403). Fix used this session:
+`gh auth switch --user zoltankosa` before pushing (Zoltán ran it himself; adding
+`zoltan-kosa-sz` as a collaborator was blocked by the auto-mode permission classifier as a
+permission-grant action). Next push will hit the same 403 unless the active `gh` account is
+switched first, or Zoltán adds `zoltan-kosa-sz` as a collaborator via github.com.
+
 **Phase:** 1, pilot built (2026-09-15). Astro scaffold, homepage (hero, selected work,
 services, about), the `/work/` gallery (17 clients from the shortlist) and one case study
 (`/work/powered-storage/`), all wired to `content/shortlist-manifest.json` and images in
