@@ -7,20 +7,19 @@ interface Props {
   labels: string[];
   alt: string;
   ratio?: string;
-  thumbLimit?: number;
 }
-const { slug, labels, alt, ratio = "4 / 3", thumbLimit = 4 } = Astro.props;
+const { slug, labels, alt, ratio = "16 / 9" } = Astro.props;
 
-const [mainLabel, ...restLabels] = labels;
+const [mainLabel] = labels;
 const mainImg = mainLabel ? getRawImage(slug, mainLabel) : undefined;
-const thumbLabels = restLabels.slice(0, thumbLimit);
 
 const lightboxImages = await Promise.all(
   labels.map(async (label) => {
     const raw = getRawImage(slug, label);
     if (!raw) return null;
-    const full = await getImage({ src: raw, width: Math.min(1600, raw.width) });
-    return { src: full.src, alt: `${alt} — ${label}` };
+    const full = await getImage({ src: raw, width: Math.min(2400, raw.width) });
+    const tall = raw.height / raw.width > 1.8;
+    return { src: full.src, alt: `${alt} — ${label}`, tall };
   })
 );
 const galleryData = JSON.stringify(lightboxImages.filter(Boolean));
@@ -31,18 +30,6 @@ const galleryData = JSON.stringify(lightboxImages.filter(Boolean));
       <Image src={mainImg} alt={alt} widths={[480, 800, 1200]} sizes="(min-width: 860px) 60vw, 100vw" loading="eager" />
     )}
   </button>
-  {thumbLabels.length > 0 && (
-    <div class="thumbs">
-      {thumbLabels.map((label, i) => {
-        const img = getRawImage(slug, label);
-        return img ? (
-          <button class="thumb" data-lightbox-open data-index={i + 1} aria-label={`Open image ${i + 2} of ${alt}`}>
-            <Image src={img} alt="" widths={[160, 240]} sizes="120px" loading="eager" />
-          </button>
-        ) : null;
-      })}
-    </div>
-  )}
 </div>
 
 <style>
@@ -60,27 +47,7 @@ const galleryData = JSON.stringify(lightboxImages.filter(Boolean));
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-  }
-  .thumbs {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-    overflow-x: auto;
-  }
-  .thumb {
-    flex: 0 0 96px;
-    aspect-ratio: 4 / 3;
-    padding: 0;
-    border: none;
-    background: var(--surface-muted);
-    overflow: hidden;
-    cursor: zoom-in;
-  }
-  .thumb :global(img) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-position: top;
     display: block;
   }
 </style>

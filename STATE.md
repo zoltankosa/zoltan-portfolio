@@ -123,6 +123,27 @@ the homepage (`raw/about/headshot.jpg`, from the portrait PSD in Dropbox `Clarit
 stacks full-width above the copy on mobile. Checked in browser at 1440px and 380px, no
 overflow. Not yet pushed — flag if a different/updated photo should replace it later.
 
+**Gallery/lightbox refinements (2026-09-17):** thumbnail strip removed from `Gallery.astro`
+(main image only); clicking it still opens the full lightbox with prev/next through every
+image. Lightbox: tall images (height/width > 1.8, e.g. full-page screenshots) now render at
+natural width with vertical scroll instead of being squeezed to fit; mobile close button
+moved into the same row as prev/next, centered between them; prev/next arrows now sit on a
+solid `--ink` filled rectangle, 20px padding, no border. `ClientCard.astro` changed from a
+2-up card grid to one full-width row per client, image left / text right (stacks on mobile);
+the outer grids on `/` and `/work/` are single-column now.
+
+**Image resolution pass (2026-09-17), on request ("reupload higher resolution images..."):**
+checked every picked image in the 17-client gallery against its Dropbox/Behance source,
+swapping in the highest-res version of the *same* shot (never a different crop or a new
+pick). Upgraded, 2-4x resolution gain: New Era (3 of 4), Waller County (all 3), Hypergrowth
+(all 5), Demand IQ (2 of 2), Income Property (all 3, INC2 re-cropped from the untouched
+full-page source), Haso (all 3), Schropp (cover only). **No local upgrade exists** (already
+native resolution or Behance-only, would need live web access to improve further):
+Ranchbyowner RBO4, Hilary Brooks HB1-5, Schropp SCH2/SCH7 (Behance campaign, not in the
+Dropbox print-brochure PDF), Fintech FIN1-5 (Behance illustration crops), Lee Yuen LY5
+(no export ever existed), Powered Storage PS8/PS10/PS12 (PS10/PS12 are live-site screenshots,
+could be re-captured at higher DPI in a follow-up browser session; PS8 is a deck slide).
+
 **Next action (Zoltán):** review the redesign + gallery/lightbox (`npm run dev`) at phone
 and desktop width, and say which of the 17 gallery clients get a full case study page next
 — the new case-study template (and `<Gallery>`) should carry over to whichever client is

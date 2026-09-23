@@ -24,14 +24,35 @@
     scrollbar-width: none;
   }
   .lb-track::-webkit-scrollbar { display: none; }
-  .lb-track :global(img) {
+  .lb-track :global(.lb-slide) {
     flex: 0 0 100%;
     scroll-snap-align: center;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     padding: 56px;
     box-sizing: border-box;
+  }
+  .lb-track :global(.lb-slide img) {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .lb-track :global(.lb-slide.tall) {
+    display: block;
+    overflow-y: auto;
+    padding: 0;
+  }
+  .lb-track :global(.lb-slide.tall img) {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .lb-close, .lb-prev, .lb-next {
     position: absolute;
@@ -46,6 +67,11 @@
     font-family: var(--font-display);
   }
   .lb-close { top: 4px; right: 4px; font-size: 32px; }
+  .lb-prev, .lb-next {
+    background: var(--ink);
+    border: none;
+    padding: 20px;
+  }
   .lb-prev { left: 4px; top: 50%; transform: translateY(-50%); }
   .lb-next { right: 4px; top: 50%; transform: translateY(-50%); }
   .lb-close:hover, .lb-prev:hover, .lb-next:hover { opacity: 0.7; }
@@ -66,32 +92,32 @@
   @media (max-width: 640px) {
     .lightbox {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr auto auto;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: 1fr auto auto;
       grid-template-areas:
-        "close close"
-        "track track"
-        "prev  next"
-        "count count";
+        "track track track"
+        "prev  close next"
+        "count count count";
     }
     .lb-close {
       position: static;
       grid-area: close;
-      justify-self: end;
+      justify-self: center;
+      padding: 14px 24px;
     }
     .lb-track {
       grid-area: track;
       min-height: 0;
     }
-    .lb-track :global(img) { padding: 16px 0; }
+    .lb-track :global(.lb-slide) { padding: 16px 0; }
+    .lb-track :global(.lb-slide.tall) { padding: 0; }
     .lb-prev, .lb-next {
       position: static;
-      justify-self: center;
       padding: 14px 24px;
       font-size: 20px;
     }
-    .lb-prev { grid-area: prev; }
-    .lb-next { grid-area: next; }
+    .lb-prev { grid-area: prev; justify-self: start; }
+    .lb-next { grid-area: next; justify-self: end; }
     .lb-count {
       position: static;
       grid-area: count;
@@ -103,7 +129,7 @@
 </style>
 
 <script>
-  type LightboxImage = { src: string; alt: string };
+  type LightboxImage = { src: string; alt: string; tall?: boolean };
 
   let images: LightboxImage[] = [];
   let current = 0;
@@ -115,10 +141,13 @@
   function renderTrack() {
     track.innerHTML = "";
     for (const img of images) {
+      const slide = document.createElement("div");
+      slide.className = img.tall ? "lb-slide tall" : "lb-slide";
       const el = document.createElement("img");
       el.src = img.src;
       el.alt = img.alt;
-      track.appendChild(el);
+      slide.appendChild(el);
+      track.appendChild(slide);
     }
   }
 

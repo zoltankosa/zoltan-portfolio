@@ -11,7 +11,9 @@ const { slug, client, href } = Astro.props;
 const labels = client.items.map((i) => i.label);
 ---
 <div class="card">
-  <Gallery slug={slug} labels={labels} alt={client.name} />
+  <div class="image">
+    <Gallery slug={slug} labels={labels} alt={client.name} />
+  </div>
   <div class="meta">
     <h3>
       {href ? (
@@ -26,8 +28,21 @@ const labels = client.items.map((i) => i.label);
 </div>
 
 <style>
-  .card { min-width: 0; }
+  .card {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  @media (min-width: 720px) {
+    .card { grid-template-columns: 1fr 1fr; gap: 48px; }
+  }
+  .image { min-width: 0; }
   .meta { padding-block-start: 18px; }
+  @media (min-width: 720px) {
+    .meta { padding-block-start: 0; }
+  }
   h3 { margin-block-end: 6px; }
   h3 a { text-decoration: none; }
   .arrow { color: var(--ink); }

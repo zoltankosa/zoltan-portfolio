@@ -9,7 +9,7 @@ const CASE_STUDY_SLUGS: Record<string, string> = {
   ps: "/work/powered-storage/",
 };
 ---
-<Base title="Work — Zoltán Kosa-Szántó" description="Selected brand, web and product design work across storage, land, fintech and more.">
+<Base title="Work — Zoltan Kosa-Szantho" description="Selected brand, web and product design work across storage, land, fintech and more.">
   <section class="section wrap intro">
     <p class="label">Pilot &middot; Websites &amp; UI</p>
     <h1>Work</h1>
@@ -17,6 +17,7 @@ const CASE_STUDY_SLUGS: Record<string, string> = {
   </section>
 
   <section class="gallery">
+    <h2 class="sr-only">Clients</h2>
     <div class="wrap grid">
       {clients.map(({ slug, ...client }) => (
         <ClientCard slug={slug} client={client} href={CASE_STUDY_SLUGS[slug]} />
@@ -40,10 +41,7 @@ const CASE_STUDY_SLUGS: Record<string, string> = {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 64px 48px;
-  }
-  @media (min-width: 720px) {
-    .grid { grid-template-columns: 1fr 1fr; }
+    gap: 64px;
   }
   .gallery :global(.line) { color: var(--gallery-muted); }
   .gallery :global(.eyebrow) { color: var(--gallery-muted); }

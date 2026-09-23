@@ -9,7 +9,7 @@ looks excellent, and it works properly on a phone. Opened with `/portfolio`.
 - **A services block is part of the site** (Zoltán, 2026-09-14, reversing his first brief).
   Start from CR 3.0 `content/engagements.md` and adapt it to a portfolio site.
 - **No separate proof block** (Zoltán, 2026-09-14). The work carries the credibility.
-- Not clarityrepublic.com. That is `~/Documents/Clarity Republic 3.0`, which this project
+- Not clarityrepublic.com. That is `~/Documents/2026Claude/Clarity Republic 3.0`, which this project
   reads and never edits.
 
 ## Direction: Clarity Republic 3.0, held loosely

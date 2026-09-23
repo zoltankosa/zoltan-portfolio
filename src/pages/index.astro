@@ -10,7 +10,7 @@ const featured = ["ps", "schropp", "leeyuen", "haso"]
   .map((slug) => clients.find((c) => c.slug === slug))
   .filter(Boolean) as typeof clients;
 ---
-<Base title="Zoltán Kosa-Szántó — Brand, web and product design">
+<Base title="Zoltan Kosa-Szantho — Brand, web and product design">
   <section class="hero section wrap">
     <h1 class="display">Twenty five years making a business easy to understand.</h1>
     <p class="eyebrow tagline">Brand, web and UX &middot; Budapest, working across the US and Europe</p>
@@ -75,7 +75,7 @@ const featured = ["ps", "schropp", "leeyuen", "haso"]
   <section id="about" class="section wrap about">
     <p class="label">About</p>
     <div class="split">
-      <Image class="portrait" src={headshot} alt="Zoltán Kosa-Szántó" width={480} height={600} loading="lazy" />
+      <Image class="portrait" src={headshot} alt="Zoltan Kosa-Szantho" width={480} height={600} loading="lazy" />
       <div class="copy">
         <h2>A specialist will beat me at his one part. That's fine.</h2>
         <p class="prose">
@@ -135,9 +135,8 @@ const featured = ["ps", "schropp", "leeyuen", "haso"]
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 64px 48px;
+    gap: 64px;
   }
-  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
   .featured :global(.line) { color: var(--gallery-muted); }
   .featured :global(.eyebrow) { color: var(--gallery-muted); }
 
@@ -155,7 +154,7 @@ const featured = ["ps", "schropp", "leeyuen", "haso"]
     font-family: var(--font-display);
     font-weight: 100;
     font-size: 40px;
-    color: var(--faint);
+    color: var(--tertiary);
     line-height: 1;
   }
   .list h3 { margin-block-end: 10px; }
